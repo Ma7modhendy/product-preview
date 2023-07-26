@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* font-family: 'Fraunces', serif; */
+    font-family: 'Montserrat', sans-serif;
+    background: var(--Cream);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    
+}
+#product{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+img,picture{
+    display: block;
+    max-width: 100%;
+}
+#product img{
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+}
+.content{
+    background: var(--White);
+    padding: 2rem;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+.cat{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color:var(--Dark-grayish-blue);
+}
+h1{
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 1;
+    color: var(--Very-dark-blue);
+}
+#product .content p{
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6;
+
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+#product .content .price .discound{
+    font-size: 30px;
+    color: var(--Dark-cyan);   
+    font-family: 'Fraunces', serif;
+    margin-right: 20px;
+
+}
+#product .content .shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: none;
+    background: var(--Dark-cyan);
+    color: var(--White);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+#product .content .shop::before{
+    content: "";
+    background: url(icon-cart.svg);
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+}
+@media(max-width:700px){
+    #product{
+        grid-template-columns: 1fr;
+
+    }
+    #product img{
+        border-top-left-radius:10px ;
+        border-top-right-radius:10px ;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    #product .content{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius:0 ;
+        border-top-right-radius:0 ;
+    }
+}
